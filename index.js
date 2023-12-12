@@ -16,7 +16,14 @@ const openai = new OpenAI({
 // });
 
 // Fine Tuning 시작 - 기존 Fine Tuning 완료 모델을 이어서 학습 가능
-const fineTune = await openai.fineTuning.jobs.create({
-  training_file: "file-Trp8wJ4G0dtNBeAvXoxG7hWy", // 훈련 파일. 공홈 File 태그의 ID
-  model: "ft:gpt-3.5-turbo-1106:personal::8UQytKPc", // 훈련 모델. Fine Tuning 태그의 모델 ID
-});
+// const fineTune = await openai.fineTuning.jobs.create({
+//   training_file: "file-Trp8wJ4G0dtNBeAvXoxG7hWy", // 훈련 파일. 공홈 File 태그의 ID
+//   model: "ft:gpt-3.5-turbo-1106:personal::8UQytKPc", // 훈련 모델. Fine Tuning 태그의 모델 ID
+// });
+
+// 모델 리스트
+// let page = await openai.fineTuning.jobs.list({ limit: 10 });
+// console.log(page);
+
+// 모델 삭제
+// let model = await openai.models.delete("모델명(id 아님)");
